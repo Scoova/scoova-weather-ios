@@ -44,7 +44,7 @@ final class ForecastResponseTests: XCTestCase {
 }
 
 final class WeatherVarTests: XCTestCase {
-    func testDefaultsUseOpenMeteoNames() {
+    func testDefaultsUseWeatherDefaultsNames() {
         XCTAssertTrue(WeatherClient.defaultCurrent.contains(.temperature2m))
         XCTAssertEqual(WeatherVar.precipitationSum.rawValue, "precipitation_sum")
         XCTAssertEqual(WeatherVar.weatherCode.rawValue, "weather_code")

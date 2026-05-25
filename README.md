@@ -1,6 +1,6 @@
 # ScoovaWeather (Swift)
 
-Open-meteo compatible Swift client for `weather.scoo-va.info`. SwiftPM
+Compatible Swift client for `weather.scoo-va.info`. SwiftPM
 library targeting iOS 15+, macOS 12+, tvOS 15+, watchOS 8+.
 
 ## Install

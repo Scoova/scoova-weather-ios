@@ -4,7 +4,7 @@ import FoundationNetworking
 #endif
 
 /// Variables you can request via `current` / `hourly` / `daily`. Subset of
-/// open-meteo — extend with `WeatherVar(rawValue: "…")` for anything not listed.
+/// scoova weather — extend with `WeatherVar(rawValue: "…")` for anything not listed.
 public struct WeatherVar: RawRepresentable, Hashable, Codable, Sendable {
     public let rawValue: String
     public init(rawValue: String) { self.rawValue = rawValue }
@@ -65,7 +65,7 @@ public enum WeatherCondition: String, Sendable {
     case clear, cloudy, fog, drizzle, rain, snow, thunderstorm, unknown
 }
 
-/// Map an open-meteo WMO weather code to a coarse-grained condition label.
+/// Map an scoova weather WMO weather code to a coarse-grained condition label.
 public func decodeWeatherCode(_ code: Int?) -> WeatherCondition {
     guard let c = code else { return .unknown }
     if c == 0 { return .clear }
@@ -82,7 +82,7 @@ public func decodeWeatherCode(_ code: Int?) -> WeatherCondition {
 /// stubbing URLSession. Returns `(statusCode, body)`.
 public typealias WeatherHttp = @Sendable (_ url: URL, _ headers: [String: String]) async throws -> (Int, Data)
 
-/// Open-meteo compatible client for the Scoova weather gateway.
+/// Compatible client for the Scoova weather gateway.
 ///
 /// Defaults to the central Scoova gateway
 /// (`https://api.scoo-va.info/api/v1/weather`). Pass `apiKey` for

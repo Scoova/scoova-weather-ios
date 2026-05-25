@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'ScoovaWeather'
-  s.version          = '1.1.1'
-  s.summary          = 'Open-Meteo-compatible weather — current, hourly, daily forecasts.'
+  s.version          = '1.1.2'
+  s.summary          = 'Scoova weather weather — current, hourly, daily forecasts.'
 
   s.description      = <<-DESC
-    Open-Meteo-compatible weather — current, hourly, daily forecasts.
+    Scoova weather weather — current, hourly, daily forecasts.
 
     Pure Swift. Uses URLSession + async/await. Auto-detects
     `Bundle.main.bundleIdentifier` for the X-Ios-Bundle-Identifier
