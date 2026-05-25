@@ -82,11 +82,12 @@ public func decodeWeatherCode(_ code: Int?) -> WeatherCondition {
 /// stubbing URLSession. Returns `(statusCode, body)`.
 public typealias WeatherHttp = @Sendable (_ url: URL, _ headers: [String: String]) async throws -> (Int, Data)
 
-/// Open-meteo compatible client for `weather.scoo-va.info`.
+/// Open-meteo compatible client for the Scoova weather gateway.
 ///
-/// Point `baseUrl` at the gateway (`https://api.scoo-va.info/v1/weather`) and
-/// pass `apiKey` for key-enforced calls. The client reads the
-/// `SCOOVA_API_KEY` environment variable when `apiKey` is `nil`.
+/// Defaults to the central Scoova gateway
+/// (`https://api.scoo-va.info/api/v1/weather`). Pass `apiKey` for
+/// key-enforced calls. The client reads the `SCOOVA_API_KEY`
+/// environment variable when `apiKey` is `nil`.
 ///
 /// `locale` accepts BCP-47 codes (`en`, `en-US`, `fr`, `es`, `de`, `it`,
 /// `pt-BR`, `nl`, `ar`, `ar-EG`, `ar-SA`, plus regional variants). It is
@@ -100,7 +101,7 @@ public actor WeatherClient {
     private let httpOverride: WeatherHttp?
 
     public init(
-        baseUrl: String = "https://weather.scoo-va.info",
+        baseUrl: String = "https://api.scoo-va.info/api/v1/weather",
         apiKey: String? = nil,
         locale: String? = nil,
         session: URLSession = .shared

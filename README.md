@@ -9,7 +9,7 @@ In your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/Scoova/scoova-weather-ios.git", from: "1.1.0"),
+    .package(url: "https://github.com/Scoova/scoova-weather-ios.git", from: "1.1.1"),
 ],
 targets: [
     .target(

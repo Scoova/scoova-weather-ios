@@ -2,6 +2,9 @@
 
 All notable changes to `ScoovaWeather` are documented here.
 
+## 1.1.1 — 2026-05-25
+- Default `baseUrl` switched from the retired `https://weather.scoo-va.info` subdomain to the central gateway at `https://api.scoo-va.info/api/v1/weather`. Callers who explicitly set `baseUrl` are unaffected. The old subdomain returns `ENDPOINT_RETIRED`.
+
 ## 1.1.0 — 2026-05-25
 
 - Initial public release of the standalone Swift package
