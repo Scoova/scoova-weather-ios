@@ -8,8 +8,7 @@ All notable changes to `ScoovaWeather` are documented here.
 ## 1.1.0 — 2026-05-25
 
 - Initial public release of the standalone Swift package
-  `Scoova/scoova-weather-ios`. Lifts the legacy unified-SDK
-  `WeatherAPI` namespace out of `ScoovaSDK` into its own product.
+  `Scoova/scoova-weather-ios`.
 - API surface parity with `@scoova/weather` (web), `scoova-weather-android`,
   `scoova-weather-react-native`, and `scoova_weather` (Flutter):
   `WeatherClient` with `current()`, `hourly()`, `daily()`,
